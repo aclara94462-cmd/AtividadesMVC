@@ -1,0 +1,4 @@
+@{ ViewData["Title"] = "Ingressos"; ViewData["Site"] = "Cine SENAI"; ViewData["Controller"] = "Cinema"; }
+<h1>Ingressos</h1>
+<ul><li>Inteira: R$ 35,00</li><li>Meia-entrada: R$ 17,50</li><li>Sessão especial: R$ 45,00</li></ul>
+@section Menu { <div class="navbar-nav flex-row gap-3"><a class="nav-link text-white" asp-controller="Cinema" asp-action="Index">Início</a><a class="nav-link text-white" asp-controller="Cinema" asp-action="Filmes">Filmes</a><a class="nav-link text-white" asp-controller="Cinema" asp-action="Ingressos">Ingressos</a></div> }

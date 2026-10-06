@@ -1,0 +1,5 @@
+@model IEnumerable<dynamic>
+@{ ViewData["Title"] = "Filmes"; ViewData["Site"] = "Cine SENAI"; ViewData["Controller"] = "Cinema"; }
+<h1>Filmes em cartaz</h1>
+<table class="table table-striped"><thead><tr><th>Nome</th><th>Gênero</th><th>Classificação</th><th>Horário</th></tr></thead><tbody>@foreach (var filme in Model) { <tr><td>@filme.Nome</td><td>@filme.Genero</td><td>@filme.Classificacao</td><td>@filme.Horario</td></tr> }</tbody></table>
+@section Menu { <div class="navbar-nav flex-row gap-3"><a class="nav-link text-white" asp-controller="Cinema" asp-action="Index">Início</a><a class="nav-link text-white" asp-controller="Cinema" asp-action="Filmes">Filmes</a><a class="nav-link text-white" asp-controller="Cinema" asp-action="Ingressos">Ingressos</a></div> }

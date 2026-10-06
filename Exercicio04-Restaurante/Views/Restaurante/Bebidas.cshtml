@@ -1,0 +1,4 @@
+@{ ViewData["Title"] = "Bebidas"; ViewData["Site"] = "Sabor & Arte"; ViewData["Controller"] = "Restaurante"; }
+<h1>Bebidas</h1>
+<ul><li>Água - R$ 5,00</li><li>Suco natural - R$ 9,00</li><li>Refrigerante - R$ 7,00</li><li>Café - R$ 5,00</li><li>Chá gelado - R$ 8,00</li></ul>
+@section Menu { <div class="navbar-nav flex-row gap-3"><a class="nav-link text-white" asp-controller="Restaurante" asp-action="Index">Início</a><a class="nav-link text-white" asp-controller="Restaurante" asp-action="Cardapio">Cardápio</a><a class="nav-link text-white" asp-controller="Restaurante" asp-action="Bebidas">Bebidas</a><a class="nav-link text-white" asp-controller="Restaurante" asp-action="Contato">Contato</a></div> }
