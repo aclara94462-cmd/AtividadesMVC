@@ -1,0 +1,4 @@
+@model AlunoMVC.Models.Aluno?
+@{ ViewData["Title"] = "Detalhes"; ViewData["Site"] = "Cadastro de Alunos"; ViewData["Controller"] = "Aluno"; }
+<h1>Detalhes do aluno</h1>@if (Model is null) { <p>Aluno não encontrado.</p> } else { <p><strong>ID:</strong> @Model.Id</p><p><strong>Nome:</strong> @Model.Nome</p><p><strong>Idade:</strong> @Model.Idade</p><p><strong>Curso:</strong> @Model.Curso</p> }
+<a asp-action="Index">Voltar</a>

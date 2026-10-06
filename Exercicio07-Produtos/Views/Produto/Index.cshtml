@@ -1,0 +1,4 @@
+@model IEnumerable<ProdutoMVC.Models.Produto>
+@{ ViewData["Title"] = "Produtos"; ViewData["Site"] = "Catálogo de Produtos"; ViewData["Controller"] = "Produto"; }
+<h1>Catálogo de Produtos</h1><table class="table table-striped"><thead><tr><th>Nome</th><th>Categoria</th><th>Estoque</th><th>Preço</th><th>Situação</th></tr></thead><tbody>@foreach (var produto in Model) { <tr><td>@produto.Nome</td><td>@produto.Categoria</td><td>@produto.Estoque</td><td>R$ @produto.Preco.ToString("N2")</td><td>@(produto.Estoque == 0 ? "Produto esgotado" : "Disponível")</td></tr> }</tbody></table>
+@section Menu { <div class="navbar-nav flex-row gap-3"><a class="nav-link text-white" asp-controller="Produto" asp-action="Index">Produtos</a><a class="nav-link text-white" asp-controller="Produto" asp-action="Disponiveis">Disponíveis</a></div> }

@@ -1,0 +1,4 @@
+@model IEnumerable<BibliotecaMVC.Models.Livro>
+@{ ViewData["Title"] = "Biblioteca"; ViewData["Site"] = "Biblioteca"; ViewData["Controller"] = "Biblioteca"; }
+<h1>Livros</h1><table class="table table-striped"><thead><tr><th>Título</th><th>Autor</th><th>Ano</th><th>Situação</th></tr></thead><tbody>@foreach (var livro in Model) { <tr><td>@livro.Titulo</td><td>@livro.Autor</td><td>@livro.Ano</td><td>@(livro.Disponivel ? "Disponível para empréstimo" : "Emprestado")</td></tr> }</tbody></table>
+@section Menu { <div class="navbar-nav flex-row gap-3"><a class="nav-link text-white" asp-controller="Biblioteca" asp-action="Index">Livros</a><a class="nav-link text-white" asp-controller="Biblioteca" asp-action="Disponiveis">Disponíveis</a></div> }

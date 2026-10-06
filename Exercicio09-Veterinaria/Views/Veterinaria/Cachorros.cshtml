@@ -1,0 +1,4 @@
+@model IEnumerable<VeterinariaMVC.Models.Animal>
+@{ ViewData["Title"] = "Cachorros"; ViewData["Site"] = "Clínica Veterinária"; ViewData["Controller"] = "Veterinaria"; }
+<h1>@ViewData["Title"]</h1><table class="table table-striped"><thead><tr><th>ID</th><th>Nome</th><th>Espécie</th><th>Idade</th><th>Dono</th></tr></thead><tbody>@foreach (var animal in Model) { <tr><td>@animal.Id</td><td>@animal.Nome</td><td>@animal.Especie</td><td>@animal.Idade</td><td>@animal.Dono</td></tr> }</tbody></table>
+@section Menu { <div class="navbar-nav flex-row gap-3"><a class="nav-link text-white" asp-controller="Veterinaria" asp-action="Index">Todos</a><a class="nav-link text-white" asp-controller="Veterinaria" asp-action="Cachorros">Cachorros</a><a class="nav-link text-white" asp-controller="Veterinaria" asp-action="Gatos">Gatos</a></div> }

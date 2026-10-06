@@ -1,0 +1,4 @@
+@model IEnumerable<AlunoMVC.Models.Aluno>
+@{ ViewData["Title"] = "Alunos"; ViewData["Site"] = "Cadastro de Alunos"; ViewData["Controller"] = "Aluno"; }
+<h1>Cadastro de Alunos</h1><table class="table table-striped"><thead><tr><th>ID</th><th>Nome</th><th>Idade</th><th>Curso</th><th></th></tr></thead><tbody>@foreach (var aluno in Model) { <tr><td>@aluno.Id</td><td>@aluno.Nome</td><td>@aluno.Idade</td><td>@aluno.Curso</td><td><a asp-action="Detalhes" asp-route-id="@aluno.Id">Detalhes</a></td></tr> }</tbody></table>
+@section Menu { <div class="navbar-nav flex-row gap-3"><a class="nav-link text-white" asp-controller="Aluno" asp-action="Index">Alunos</a><a class="nav-link text-white" asp-controller="Aluno" asp-action="Detalhes">Detalhes</a></div> }

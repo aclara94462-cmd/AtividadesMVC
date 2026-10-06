@@ -1,0 +1,4 @@
+@model IEnumerable<ProdutoMVC.Models.Produto>
+@{ ViewData["Title"] = "Disponíveis"; ViewData["Site"] = "Catálogo de Produtos"; ViewData["Controller"] = "Produto"; }
+<h1>Produtos disponíveis</h1><ul>@foreach (var produto in Model) { <li>@produto.Nome - @produto.Estoque unidades</li> }</ul>
+@section Menu { <div class="navbar-nav flex-row gap-3"><a class="nav-link text-white" asp-controller="Produto" asp-action="Index">Produtos</a><a class="nav-link text-white" asp-controller="Produto" asp-action="Disponiveis">Disponíveis</a></div> }

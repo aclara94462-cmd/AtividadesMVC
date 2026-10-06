@@ -1,0 +1,4 @@
+@model IEnumerable<EletronicoMVC.Models.Eletronico>
+@{ ViewData["Title"] = "Categoria"; ViewData["Site"] = "Loja de Eletrônicos"; ViewData["Controller"] = "Eletronico"; }
+<h1>Categoria: Informática</h1>@foreach (var item in Model) { <p>@item.Nome - R$ @item.Preco.ToString("N2")</p> }
+@section Menu { <div class="navbar-nav flex-row gap-3"><a class="nav-link text-white" asp-controller="Eletronico" asp-action="Index">Todos</a><a class="nav-link text-white" asp-controller="Eletronico" asp-action="EmEstoque">Em estoque</a><a class="nav-link text-white" asp-controller="Eletronico" asp-action="Categoria">Categoria</a><a class="nav-link text-white" asp-controller="Eletronico" asp-action="AbaixoDe">Abaixo de R$ 1000</a></div> }
